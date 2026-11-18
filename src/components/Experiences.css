@@ -1,0 +1,174 @@
+
+.experiences {
+    width: 100%; /* Ширина основного блока */
+    padding: 15px 5% 60px; /* Внешние отступы */
+    background: #ffffff; /* Белый фон */
+  }
+  
+  /* КАТЕГОРИИ */
+  
+  .categories {
+    display: flex; /* Располагаем категории в ряд */
+    align-items: center; /* Выравниваем по вертикали */
+    justify-content: space-between; /* Распределяем категории */
+    gap: 20px; /* Расстояние между категориями */
+    overflow-x: auto; /* Горизонтальная прокрутка */
+    padding: 10px 0 18px; /* Внутренние отступы */
+    border-bottom: 1px solid #eeeeee; /* Нижняя линия */
+    scrollbar-width: none; /* Скрываем полосу прокрутки Firefox */
+  }
+  
+  .categories::-webkit-scrollbar {
+    display: none; /* Скрываем полосу прокрутки Chrome */
+  }
+  
+  .category {
+    display: flex; /* Включаем Flexbox */
+    flex-direction: column; /* Иконка над текстом */
+    align-items: center; /* Центрируем содержимое */
+    flex-shrink: 0; /* Запрещаем сжатие */
+    gap: 8px; /* Расстояние между иконкой и текстом */
+    padding: 0 0 10px; /* Нижний отступ */
+    border-bottom: 2px solid transparent; /* Место для линии */
+    color: #717171; /* Цвет названия */
+    font-size: 11px; /* Размер текста */
+    white-space: nowrap; /* Запрещаем перенос текста */
+  }
+  
+  .category-icon {
+    width: 24px; /* Ширина иконки */
+    height: 24px; /* Высота иконки */
+    object-fit: contain; /* Сохраняем пропорции PNG */
+  }
+  
+  /* ВЕРХНИЕ КАРТОЧКИ */
+  
+  .live-section {
+    margin-top: 12px; /* Отступ после категорий */
+  }
+  
+  .live-grid {
+    display: grid; /* Создаём сетку */
+    grid-template-columns: repeat(3, 167px); /* Три карточки */
+    gap: 15px; /* Расстояние между карточками */
+  }
+  
+  /* ПРОШЛЫЕ ВПЕЧАТЛЕНИЯ */
+  
+  .past-section {
+    margin-top: 35px; /* Отступ перед разделом */
+  }
+  
+  .past-section h2 {
+    margin: 0 0 16px; /* Отступы заголовка */
+    color: #222222; /* Цвет заголовка */
+    font-size: 24px; /* Размер заголовка */
+    font-weight: 600; /* Толщина шрифта */
+  }
+  
+  .past-grid {
+    display: grid; /* Используем CSS Grid */
+    grid-template-columns: repeat(6, minmax(0, 1fr)); /* Шесть колонок */
+    column-gap: 15px; /* Расстояние между колонками */
+    row-gap: 26px; /* Расстояние между рядами */
+  }
+  
+  /* КАРТОЧКИ */
+  
+  .experience-card {
+    min-width: 0; /* Разрешаем карточке сжиматься */
+  }
+  
+  .experience-image {
+    position: relative; /* Основа для элементов поверх фото */
+    width: 100%; /* Ширина фотографии */
+    aspect-ratio: 1 / 1; /* Квадратное изображение */
+    overflow: hidden; /* Обрезаем края изображения */
+    border-radius: 9px; /* Скругляем углы */
+    background: #eeeeee; /* Фон изображения */
+  }
+  
+  .experience-image img {
+    display: block; /* Убираем нижний зазор */
+    width: 100%; /* Заполняем ширину */
+    height: 100%; /* Заполняем высоту */
+    object-fit: cover; /* Сохраняем пропорции фотографии */
+  }
+  
+  .share-icon {
+    position: absolute; /* Размещаем поверх фотографии */
+    top: 10px; /* Отступ сверху */
+    right: 10px; /* Отступ справа */
+    display: flex; /* Выравниваем значок */
+    align-items: center; /* Центрируем вертикально */
+    justify-content: center; /* Центрируем горизонтально */
+    width: 27px; /* Ширина кружка */
+    height: 27px; /* Высота кружка */
+    border-radius: 50%; /* Круглая форма */
+    background: #ffffff; /* Белый фон */
+    color: #222222; /* Цвет значка */
+    font-size: 16px; /* Размер значка */
+  }
+  
+  .image-dots {
+    position: absolute; /* Размещаем поверх фото */
+    bottom: 8px; /* Отступ снизу */
+    left: 0; /* Прижимаем к левому краю */
+    width: 100%; /* Полная ширина */
+    color: #ffffff; /* Белые точки */
+    text-align: center; /* Выравнивание по центру */
+    font-size: 12px; /* Размер точек */
+    text-shadow: 0 1px 3px #000000; /* Тень для контраста */
+  }
+  
+  .experience-card h3 {
+    margin: 8px 0 4px; /* Отступы названия */
+    overflow: hidden; /* Скрываем лишний текст */
+    color: #222222; /* Цвет текста */
+    font-size: 12px; /* Размер названия */
+    font-weight: 600; /* Полужирный текст */
+    text-overflow: ellipsis; /* Многоточие в конце */
+    white-space: nowrap; /* Одна строка */
+  }
+  
+  .experience-card p {
+    margin: 0 0 3px; /* Отступы описания */
+    overflow: hidden; /* Скрываем лишний текст */
+    color: #717171; /* Серый цвет */
+    font-size: 10px; /* Размер описания */
+    text-overflow: ellipsis; /* Многоточие */
+    white-space: nowrap; /* Одна строка */
+  }
+  
+  .sold-out {
+    color: #222222; /* Цвет статуса */
+    font-size: 10px; /* Размер статуса */
+  }
+  
+  /* АДАПТАЦИЯ */
+  
+  @media (max-width: 1100px) {
+    .past-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr)); /* Четыре колонки */
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .experiences {
+      padding: 12px 16px 40px; /* Уменьшаем отступы */
+    }
+  
+    .categories {
+      justify-content: flex-start; /* Выравниваем категории слева */
+    }
+  
+    .live-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* Две карточки */
+    }
+  
+    .past-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* Две колонки */
+      gap: 20px 12px; /* Расстояние между карточками */
+    }
+  }
+  
